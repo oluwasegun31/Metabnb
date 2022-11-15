@@ -1,5 +1,5 @@
 import React from 'react'
-import CardsData from '../data/CardsData'
+import CardsData from '../DataPages/DataCards'
 import stars from '../images/stars.svg'
 
 function Cards() {

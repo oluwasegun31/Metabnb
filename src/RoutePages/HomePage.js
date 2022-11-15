@@ -5,7 +5,7 @@ import Cards from '../components/Cards'
 import NFTs from '../components/NFTs'
 import Footer from '../components/Footer'
 
-function Home() {
+function HomePage() {
   return (
     <>
         <Navbar />
@@ -17,4 +17,4 @@ function Home() {
   )
 }
 
-export default Home
+export default HomePage

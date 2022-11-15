@@ -8,9 +8,8 @@ import { Link } from "react-router-dom";
 function Navbar() {
   return (
         <nav className="navbar navbar-expand-lg navbar-light pt-4">
-            {/*  Container wrapper  */}
+            
             <div className="container-fluid">
-                {/*  Navbar brand  */}
                 <Link className="navbar-brand me-2" to="/">
                     <img
                         src={MetabnbLogo}
@@ -19,7 +18,6 @@ function Navbar() {
                     />
                 </Link>
 
-                {/*  Toggle button  */}
                 <button
                     className="navbar-toggler"
                     type="button"
@@ -32,9 +30,7 @@ function Navbar() {
                     <i className="fas fa-bars"></i>
                 </button>
 
-                {/*  Collapsible wrapper  */}
                 <div className="collapse navbar-collapse" id="navbarButtonsExample">
-                    {/*  Center links  */}
                     <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
                         <li className="nav-item">
                             <Link className="nav-link px-4" to="/">Home</Link>
@@ -50,7 +46,6 @@ function Navbar() {
                         </li>
                     </ul>
 
-                    {/*  Right link  */}
                     <div className="d-flex align-items-center">
                         <a
                             className="btn btn-dark px-3 nav-link__right"
@@ -61,7 +56,7 @@ function Navbar() {
                         >
                             Connect wallet
                         </a>
-                        {/* modal */}
+
                         <div className="modal fade"  id='Modal'>
                             <div className="modal-dialog modal-dialog-centered">
                                 <div className="modal-content">
@@ -93,9 +88,7 @@ function Navbar() {
                         </div>
                     </div>
                 </div>
-                {/*  Collapsible wrapper  */}
             </div>
-            {/*  Container wrapper  */}
         </nav>
   )
 }

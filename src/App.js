@@ -1,22 +1,25 @@
 import './App.css';
-import {BrowserRouter, Routes, Route} from 'react-router-dom'
-import Home from './pages/Home';
-import PlaceToStay from './pages/PlaceToStay'
+import {Routes, Route} from 'react-router-dom'
+import HomePage from './RoutePages/HomePage';
+import PlaceToStay from './RoutePages/PlaceToStay'
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path= "/" element = {
-            <Home />
-          }
-        />
-        <Route path='/Place_to_Stay' element = {
-            <PlaceToStay />
-          }
-        />
-      </Routes>
-    </BrowserRouter>
+    <Routes>
+      <Route 
+        path= "/" 
+        element = {
+          <HomePage />
+        }
+      />
+      
+      <Route 
+        path='/Place_to_Stay'
+        element = {
+          <PlaceToStay />
+        }
+      />
+    </Routes>
   );
 }
 

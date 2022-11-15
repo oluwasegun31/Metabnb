@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-import PlaceToStayData from '../data/PlaceToStayData'
+import PlaceToStayData from '../DataPages/DataPlace'
 import stars from '../images/stars.svg'
 import settings__icon from '../images/setting-5.svg'
 
