@@ -1,38 +1,346 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Red+Rose:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Red Rose', cursive;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body::-webkit-scrollbar {
+  display: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* navbar styling */
+
+nav, #hero .container, #cards, #NFTs .container, #placeToStay__cards{
+  max-width: 90%;
+  margin: auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav > img {
+  width: 188px;
+  height: 32px;
+}
+
+nav .nav-link {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25px;
+  color: #434343;
+}
+
+nav .nav-link__right {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #FFFFFF;
+  background: linear-gradient(90deg, #A02279 11.45%, #A02279 11.45%);
+  border-radius: 10px;
+  padding: 15px 26px;
+  border: none;
+}
+
+nav .modal-content {
+  max-width: 600px;
+  background: #FFFFFF;
+  border-radius: 16px;
+}
+
+nav .modal-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  color: #333333;
+}
+
+nav .modal-body .brand {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 23px;
+  color: #000000;
+}
+
+nav .modal-body div > button {
+  width: 100%;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 8px 0px;
+  border: 1px solid #CFD8DC;
+  background: #FFFFFF;
+  border-radius: 12px;
 }
 
-.App-link {
-  color: #61dafb;
+nav .modal-body div > button:hover {
+  background-color: #F8F9FA;
+  border: 1px solid #CFD8DC;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* hero section styling */
+
+#hero .hero__heading, #hero .hero__text, #hero .hero__searchBar {
+  margin: auto;
+}
+
+#hero .hero__heading {
+  max-width: 646px;
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 140%;
+  letter-spacing: -0.02em;
+  color: #434343;
+  margin-bottom: 48px;
+  margin-left: 0;
+}
+
+#hero .hero__heading > span {
+  color: #A02279;
+}
+
+#hero .hero__text {
+  max-width: 636px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 35px;
+  color: #434343;
+}
+
+#hero .hero__searchBar {
+  max-width: 618px;
+  height: 54px;
+  color: #A3A3A3;
+  background: rgba(247, 247, 247, 0.1);
+  border: 1px solid #A3A3A3;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+
+#hero .hero__searchBar > span:first-of-type {
+  padding-left: 15px;
+}
+
+#hero .hero__searchBar > span:last-of-type {
+  font-size: 16px;
+  padding: 16px 85px;
+  color: #FFFFFF;
+  background: linear-gradient(90deg, #A02279 11.45%, #A02279 11.46%);
+  border-radius: 0px 8px 8px 0px;
+}
+
+#hero .hero__footer {
+  background-color: #A02279;
+  height: 70px;
+}
+
+/* cards section styling */
+
+#cards .cards__heading {
+  font-weight: 700;
+  font-size: 48px;
+  color: #000;
+}
+
+#cards .cards__info .card, #placeToStay__cards .card  {
+  background: linear-gradient(124.4deg, #FFFFFF 10.8%, #FFFFFF 87.34%);
+  border: 1px solid #D7D7D7;
+  border-radius: 15px;
+  padding: 16px;
+}
+
+#cards .cards__info .card .card-body, #placeToStay__cards .card .card-body {
+  padding: 0;
+}
+
+#cards .cards__info .card .card-body .card__title, 
+#cards .cards__info .card .card-body .card__text, 
+#placeToStay__cards .card .card-body .card__title, 
+#placeToStay__cards .card .card-body .card__text {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 13px;
+}
+
+#cards .cards__info .card .card-body .card__title > span:last-of-type, 
+#placeToStay__cards .card .card-body .card__title > span:last-of-type {
+  font-weight: 700;
+}
+
+/* Metabnb NFTs section styling */
+
+#NFTs {
+  display: -webkit-box;
+  background: linear-gradient(90deg, #A02279 11.45%, #A02279 11.45%);
+}
+
+#NFTs .NFTs__heading, #NFTs .NFTs_text {
+  background: linear-gradient(124.4deg, #FFFFFF 10.8%, #FFFFFF 87.34%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+#NFTs .NFTs__heading {
+  max-width: 346px;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 60px;
+}
+
+#NFTs .NFTs__text {
+  max-width: 405px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 35px;
+  color: #FFFFFF;
+}
+
+#NFTs .NFTs__learnMore {  
+  width: 156px;
+  height: 48px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #A02279;
+  background: linear-gradient(124.4deg, #FFFFFF 10.8%, #FFFFFF 87.34%);
+  border-radius: 8px;
+  border: none
+}
+
+/* footer */
+
+footer {
+  background-color: #1D1D1E;
+  color: #FFFFFF;
+}
+
+footer .container .row div h5 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: #FFFFFF;
+}
+
+footer .container .row div ul > li > a {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 35px;
+  color: #F1F3F9;
+}
+
+/* place to stay page styling */
+
+#placeToStay__cards .top-nav ul {
+  overflow-x: scroll;
+}
+#placeToStay__cards .top-nav ul::-webkit-scrollbar {
+  display: none;
+}
+
+#placeToStay__cards .top-nav ul > li {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25px;
+  color: #434343;
+}
+
+#placeToStay__cards .top-nav ul > li:last-of-type {
+  width: 161px;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #B4B4B4;
+  border-radius: 8px;
+}
+
+#placeToStay__cards .top-nav ul > li:last-of-type > span {
+  padding-left: 20px;
+}
+
+
+@media (max-width: 768px) {
+  nav .container-fluid {
+    padding: 0;
+  } 
+  
+  nav .container-fluid .navbar-brand img {
+    width: 170px;
   }
-  to {
-    transform: rotate(360deg);
+
+  nav .nav-link {
+    font-size: 16px;
   }
+
+  #hero .hero__footer > img  {
+    width: 105px;
+  }
+
+  #hero .hero__heading, #NFTs .NFTs__heading {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  #hero .hero__text, #NFTs .NFTs__text {
+    font-size: 16px;
+    line-height: 28px;
+  }
+  
+  #hero .hero__searchBar > span:last-of-type {
+    padding: 15px 26px;
+  }
+
+  #cards .cards__heading {
+    font-size: 28px;
+  }
+
+  #placeToStay__cards .top-nav ul > li {
+    font-size: 16px;
+  }
+
+  #placeToStay__cards .top-nav ul > li {
+    padding-right: 20px;
+    white-space: nowrap;
+  }
+
+  nav .modal-body .brand {
+    font-size: 15px;
+  }
+
+}
+
+@media (min-width: 769px) and (max-width: 1227px) {
+
+  nav .nav-link {
+    font-size: 16px;
+  }
+
+  #hero .hero__heading, #NFTs .NFTs__heading {
+    font-size: 40px;
+    margin-bottom: 20px;
+    line-height: 120%;
+  }
+
+  #hero .hero__text, #NFTs .NFTs__text {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  #hero .container .row .col-lg-5 {
+    width: 65%;
+    margin: auto;
+  }
+
+  #placeToStay__cards .top-nav ul > li {
+    font-size: 18px;
+  }
+
+  #placeToStay__cards .top-nav ul > li {
+    padding-right: 20px;
+    white-space: nowrap;
+  }
+
 }
